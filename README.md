@@ -1,3 +1,4 @@
+https://youtu.be/zU1qP36kZkY
 
 🧑‍💼 User Management Service
 A Spring Boot microservice for managing users with JWT-based authentication, event-driven logging via Kafka, and persistence using MySQL. Designed with clean separation of concerns and built to run containerized with Docker.
