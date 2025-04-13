@@ -1,3 +1,4 @@
+
 🧑‍💼 User Management Service
 A Spring Boot microservice for managing users with JWT-based authentication, event-driven logging via Kafka, and persistence using MySQL. Designed with clean separation of concerns and built to run containerized with Docker.
 
@@ -162,6 +163,3 @@ Error Responses:
 403 Forbidden – If the authenticated user tries to access someone else’s journal.
 
 401 Unauthorized – If no valid token is provided.
-
-
-[14.04.2025 04_17.webm](https://github.com/user-attachments/assets/1e8cf33b-2cbc-4722-9c76-4bc52a87c778)
