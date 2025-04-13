@@ -124,3 +124,44 @@ Response:
 204 No Content
 
 
+Consumer API:
+Base Path: /apica/journal
+🔐 Authentication Required:
+All endpoints require a valid JWT token in the Authorization header (format: Bearer <token>).
+
+📥 GET /events/{username}
+Description:
+Fetches all journal events for the given username. Only the authenticated user can access their own events.
+
+URL:
+GET /apica/journal/events/{username}
+
+Path Parameter:
+
+Name	Type	Description
+username	String	Username to fetch events for
+Headers:
+
+Header	Value Example	Description
+Authorization	Bearer eyJhbGciOiJIUzI1NiIsInR5cCI...	JWT token for auth
+Response:
+[
+  {
+    "id": 1,
+    "username": "john_doe",
+    "eventType": "USER_CREATED",
+    "description": "User john_doe registered successfully",
+    "timestamp": "2024-04-14T13:45:30.123Z"
+  },
+  ...
+]
+Success Status Code: 200 OK
+
+Error Responses:
+
+403 Forbidden – If the authenticated user tries to access someone else’s journal.
+
+401 Unauthorized – If no valid token is provided.
+
+
+[14.04.2025 04_17.webm](https://github.com/user-attachments/assets/1e8cf33b-2cbc-4722-9c76-4bc52a87c778)
